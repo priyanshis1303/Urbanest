@@ -25,14 +25,23 @@ async function main(){
 //views
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
+app.use(express.urlencoded({extended:true}));
 
-//index route
+
 app.get(("/"),(req,res)=>{
   res.send("on root ")
 })
+//index route
 app.get(("/listings"),async (req,res)=>{
     const allisting =await Listing.find({})
     res.render("listings/index.ejs",{  allisting});
+});
+//show route
+
+app.get("/listings/:id",async (req,res)=>{
+    let {id}=req.params;
+    const listing=await Listing.findById(id);
+    res.render("listings/show.ejs",{listing})
 })
 app.listen(3000,()=>{
     console.log("app is listening to port 3000")

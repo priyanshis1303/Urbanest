@@ -6,8 +6,15 @@
     <title>Urbanest</title>
 </head>
 <body>
-    <h3>all listings
-        
-    </h3>
+   <h3>All Listings</h3>
+<ul>
+  <% for (let listing of allisting) { %>
+    <li>
+      <a href="/listings/<%= listing._id %>">
+        <%= listing.title %>
+      </a>
+    </li>
+  <% } %>
+</ul>
 </body>
 </html>
