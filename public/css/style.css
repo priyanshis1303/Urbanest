@@ -1,0 +1,91 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+.navbar{
+    height: 5.5rem;
+      background-color: white;
+}
+.fa-compass{
+    color: red;
+    font-size: 2 rem;
+}
+
+.nav-link{
+    color: black !important;
+  
+}
+
+/* footer */
+footer {
+  background: #fff;           /* white background */
+  color: #222;                /* dark text */
+  padding: 20px 40px;
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ddd; /* subtle border */
+}
+
+.f-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.f-info-socials i {
+  margin: 0 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #222;                /* dark icons */
+  transition: color 0.3s ease;
+}
+
+.f-info-socials i:hover {
+  color: #007bff;             /* blue on hover */
+}
+
+.f-info-brand {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.f-info-links a {
+  margin: 0 10px;
+  color: #222;                /* dark links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.f-info-links a:hover {
+  color: #007bff;             /* blue on hover */
+  text-decoration: underline;
+}
+.fa-square-instagram {
+  transition: color 0.3s ease;
+}
+
+.fa-square-instagram:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* card */
+.card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400;
+}

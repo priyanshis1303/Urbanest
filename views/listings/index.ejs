@@ -1,23 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urbanest</title>
-</head>
+<% layout('layouts/boilerplate') %>
 <body>
    <h3>All Listings</h3>
-   <form action="/listings/new">
+   <!-- <form method ="GET" action="/listings/new">
     <button>create new listing </button>
-   </form>
-<ul>
-  <% for (let listing of allisting) { %>
+   </form> -->
+   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for (let listing of allisting) { %>
+   <div class="card col" style="width: 20rem;">
+ <a href="/listings/<%= listing._id %>"><img src="<%= listing.image.url%>" class="card-img-top" alt="listing image " style="height: 20rem;"></a>  
+  <div class="card-body">
+    <p class="card-text"> 
+      <b><%= listing.title %> </b>
+      <br>
+      &#x20b9 
+  <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %>
+
+    </p>
+  </div>
+</div>
+ <% } %>
+   </div>
+
+<!-- <ul> -->
+  <!-- <% for (let listing of allisting) { %>
     <li>
       <a href="/listings/<%= listing._id %>">
         <%= listing.title %>
       </a>
     </li>
   <% } %>
-</ul>
+</ul> -->
 </body>
-</html>
+
