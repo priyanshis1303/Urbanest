@@ -7,22 +7,28 @@ const listingSchema = new Schema({
         required: true,
     },
     description: String,
-//     image: {
-//   filename: { type: String, default: "listingimage" },
-//   url: {
-//     type: String,
-//     default: "https://via.placeholder.com/400",
-//   },
-// },
-image: {
-  filename: { type: String },
-  url: { type: String },  // no default
+    image: {
+  filename: { type: String, default: "listingimage" },
+  url: {
+    type: String,
+    default: "https://via.placeholder.com/400",
+  },
 },
+// image: {
+//   filename: { type: String },
+//   url: { type: String },  // no default
+// },
 
 
     price: Number,
     location: String,
     country: String,
+    reviews:[
+      {
+        type:Schema.Types.ObjectId,
+        ref: "Review"
+      }
+    ]
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
